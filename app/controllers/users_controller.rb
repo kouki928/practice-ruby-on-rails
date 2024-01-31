@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    id = @user.id
+    @first_post = Micropost.find_by(user_id: id)
   end
 
   # GET /users/new
